@@ -1,5 +1,3 @@
-# Welcome
-
 Mango allows you to publish APIs
 much the way you can publish static Web sites
 to S3 and CloudFront.

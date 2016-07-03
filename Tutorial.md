@@ -1,10 +1,3 @@
-# Tutorial
-
-
-Mango allows you to publish APIs
-much the way you can publish static Web sites
-to S3 and CloudFront.
-
 In this tutorial,
 we'll create and publish a simple greeting API.
 This requires that we:
@@ -18,11 +11,11 @@ This requires that we:
 You should have your AWS credentials available
 in your environment.
 
-## Installation
+# Installation
 
     npm install -g mango
 
-## Initialize Your Application
+# Initialize Your Application
 
     mango init
 
@@ -42,7 +35,7 @@ file for you, which defines your API
 and a default Lambda function that will
 return that definition.
 
-## Publish Your First API
+# Publish Your First API
 
 At this point, you can publish your API
 to make sure everything is working properly.
@@ -58,7 +51,7 @@ you should be able to `curl` it.
 
 and get back a API reference document as HTML.
 
-## Defining An Endpoint
+# Defining An Endpoint
 
 Let's add a greeting endpoint to `description.yml`.
 Place this under the `resources` property,
@@ -81,7 +74,7 @@ either before or after the `description` resource.
 We've defined a `greeting` resource
 and a method within that resource named `get`.
 
-## Defining A Handler
+# Defining A Handler
 
 Add a JavaScript file under `lib/handlers`
 named `greeting-get.js`.
@@ -111,7 +104,7 @@ And test it out.
     curl https://api.acme.org/greeting/World
     Hello World!
 
-## Summary
+# Summary
 
 So we've installed Mango, initialized our application,
 defined a resource, method, and handler,

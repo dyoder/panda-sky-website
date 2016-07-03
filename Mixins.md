@@ -1,5 +1,3 @@
-# Mixins
-
 Mixins are a resource that you can add
 to your application so that your API
 can access them.
@@ -12,7 +10,7 @@ Currently, the only supported mixin is S3.
 But our roadmap includes plans for mixing in
 Cognito, RDS, SQS, SNS, and many others.
 
-## Adding A Mixin
+# Adding A Mixin
 
 To add a mixin to your application,
 just run `mixin add`.
@@ -27,7 +25,7 @@ For example, for the S3 mixin,
 Mango needs to know the name of the bucket.
 The API domain name is the default.
 
-## Removing A Mixin
+# Removing A Mixin
 
 You can remove a mixin the same way you add them.
 
