@@ -1,4 +1,4 @@
-Panda Sky allows you to publish APIs
+Mango allows you to publish APIs
 much the way you can publish static Web sites
 to S3 and CloudFront.
 Your API will run with the same
@@ -17,6 +17,6 @@ And all you have to do is:
 
 - Checkout the [[Tutorial]]!
 
-- Learn about the Panda Sky [[API definition]] format.
+- Learn about the Mango [[API definition]] format.
 
 - Learn about [[Mixins]].

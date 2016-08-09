@@ -1,6 +1,6 @@
-The Panda Sky API definition is a YAML description
+The Mango API definition is a YAML description
 of your API.
-At the top level, a Panda Sky API definition
+At the top level, a Mango API definition
 has four properties:
 
 - a name
@@ -70,7 +70,7 @@ of the type.
 There are two JSON Schema attributes that must be defined.
 A `title` attribute and a `mediaType` attribute.
 The `title` determines how to reference the type.
-The `mediaType` will be used in future versions of Panda Sky
+The `mediaType` will be used in future versions of Mango
 to determine what `accept` or `content-type` headers to use.
 This can either be `application/json` or a custom media type,
 such as:
@@ -85,7 +85,7 @@ Query parameters help identify a _resource_
 not a _method_ on a resource.
 In addition, they are by necessity more complex
 since they are attempting to allow describing
-arbitrary APIs, whereas Panda Sky is only concerned with
+arbitrary APIs, whereas Mango is only concerned with
 (a) APIs that can be published to the API Gateway, and
 (b) follow our own [opinionated software][] best practices.
 

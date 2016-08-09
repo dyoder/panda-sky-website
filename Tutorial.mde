@@ -2,8 +2,8 @@ In this tutorial,
 we'll create and publish a simple greeting API.
 This requires that we:
 
-- install Panda Sky
-- initialize our application for use with Panda Sky
+- install Mango
+- initialize our application for use with Mango
 - define an endpoint in YAML
 - define a handler in JavaScript
 - publish our API
@@ -23,7 +23,7 @@ This will ask you for the name of your API
 and domain and the AWS region (ex: `us-west-2`)
 to which you want to publish.
 
-Panda Sky will also define four default environments for you:
+Mango will also define four default environments for you:
 
 - production
 - staging
@@ -106,6 +106,6 @@ And test it out.
 
 # Summary
 
-So we've installed Panda Sky, initialized our application,
+So we've installed Mango, initialized our application,
 defined a resource, method, and handler,
 and published our API.

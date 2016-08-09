@@ -2,7 +2,7 @@ Mixins are a resource that you can add
 to your application so that your API
 can access them.
 Since your AWS credentials are
-available to Panda Sky handlers (Lambda functions)
+available to Mango handlers (Lambda functions)
 any AWS resource can potentially be “mixed in”
 this way.
 
@@ -22,7 +22,7 @@ which is just a set of questions
 associated with that mixin.
 
 For example, for the S3 mixin,
-Panda Sky needs to know the name of the bucket.
+Mango needs to know the name of the bucket.
 The API domain name is the default.
 
 # Removing A Mixin
