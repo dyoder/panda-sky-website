@@ -13,11 +13,11 @@ in your environment.
 
 # Installation
 
-    npm install -g mango
+    npm install -g sky
 
 # Initialize Your Application
 
-    mango init
+    sky init
 
 This will ask you for the name of your API
 and domain and the AWS region (ex: `us-west-2`)
@@ -40,7 +40,7 @@ return that definition.
 At this point, you can publish your API
 to make sure everything is working properly.
 
-    mango publish production
+    sky publish production
 
 This will publish your API!
 It may take a few minutes to run the first time around.
@@ -97,7 +97,7 @@ endpoints = {
 
 Let's publish our update.
 
-    mango publish production
+    sky publish production
 
 And test it out.
 

@@ -11,7 +11,7 @@ And all you have to do is:
 
 - Define handlers in JavaScript
 
-- And publish with the `mango publish` command!
+- And publish with the `sky publish` command!
 
 ## Resources
 
