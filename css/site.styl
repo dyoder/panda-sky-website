@@ -1,0 +1,50 @@
+pct(n)
+  (n * 100) + "%"
+
+use("_plugins/verse.js")
+@import "verse"
+
+
+// The font size is set based on Medium's use
+// of 21px Charter font for the body and
+// a line-height ratio of 1.58.
+// Since we use integer line-heights to
+// achieve better rhythm (always specified
+// in rem units, so effectively we have
+// a vertical rule in multiples of the
+// rem unit), we have to set the rem unit
+// precisely. A line-height of 5rem
+// with a vertical spacing of 36.71%
+// gives us a font-size of 21 pixels
+// at a rem unit of 6.636 pixels...
+// All this is based on the Charter font
+// so DO NOT CHANGE THE BLOG BODY FONT
+// or if we do, we should probably change
+// these values as well.
+
+html
+  font-size 6.636px
+
+  // on anything smaller than an iPhone 5
+  // just shrink everything down a bit
+  @media screen and (max-width: 320px)
+    font-size 6px
+
+body
+
+  flow row left center wrap
+  padding 5rem 10rem
+  max-width 150rem
+
+  & > p:first-of-type
+    rhythm 7rem 60%
+
+  h1, h2, h3, h4, h5, p, li
+    width 80rem
+
+  p, li
+    rhythm 5rem 60%
+
+.logo
+  img
+    width 50rem
