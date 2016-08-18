@@ -1,0 +1,37 @@
+source: "."
+target: "_build"
+server:
+  port: 8088
+
+aws:
+
+  domain: pandastrike.com
+  region: us-west-1
+
+  site:
+    index: index
+    error: 404
+
+  environments:
+
+    production:
+      apex: secondary
+      hostnames:
+        - sky
+      cache:
+        expires: 1800 # 30 minutes
+        ssl: true
+        priceClass: 100
+
+    staging:
+      hostnames:
+        - staging-sky
+
+    feature:
+      hostnames:
+        - feature-sky
+
+# blog:
+#   page:
+#     size: 10
+#     template: "_layouts/blog-summary.jade"

@@ -1,0 +1,26 @@
+<p>Mixins are a resource that you can add
+to your application so that your API
+can access them.
+Since your AWS credentials are
+available to Panda Sky handlers (Lambda functions)
+any AWS resource can potentially be “mixed in”
+this way.</p>
+<p>Currently, the only supported mixin is S3.
+But our roadmap includes plans for mixing in
+Cognito, RDS, SQS, SNS, and many others.</p>
+<h1 id="adding-a-mixin">Adding A Mixin</h1>
+<p>To add a mixin to your application,
+just run <code>mixin add</code>.</p>
+<pre><code>sky mixin add s3
+</code></pre><p>Each mixin has an “interviewer”,
+which is just a set of questions
+associated with that mixin.</p>
+<p>For example, for the S3 mixin,
+Panda Sky needs to know the name of the bucket.
+The API domain name is the default.</p>
+<h1 id="removing-a-mixin">Removing A Mixin</h1>
+<p>You can remove a mixin the same way you add them.</p>
+<pre><code>sky mixin rm s3
+</code></pre><p>Keep in mind, unlike deleting an API environment,
+removing a mixin does not delete the corresponding AWS resource.
+All it does is disassociate it from your API.</p>

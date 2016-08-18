@@ -1,0 +1,81 @@
+<p>In this tutorial,
+we&#39;ll create and publish a simple greeting API.
+This requires that we:</p>
+<ul>
+<li>install Panda Sky</li>
+<li>initialize our application for use with Panda Sky</li>
+<li>define an endpoint in YAML</li>
+<li>define a handler in JavaScript</li>
+<li>publish our API</li>
+</ul>
+<p>You should have your AWS credentials available
+in your environment.</p>
+<h1 id="installation">Installation</h1>
+<pre><code>npm install -g sky
+</code></pre><h1 id="initialize-your-application">Initialize Your Application</h1>
+<pre><code>sky init
+</code></pre><p>This will ask you for the name of your API
+and domain and the AWS region (ex: <code>us-west-2</code>)
+to which you want to publish.</p>
+<p>Panda Sky will also define four default environments for you:</p>
+<ul>
+<li>production</li>
+<li>staging</li>
+<li>test</li>
+<li>development</li>
+</ul>
+<p>Finally, it will generate a stub <code>api.yaml</code>
+file for you, which defines your API
+and a default Lambda function that will
+return that definition.</p>
+<h1 id="publish-your-first-api">Publish Your First API</h1>
+<p>At this point, you can publish your API
+to make sure everything is working properly.</p>
+<pre><code>sky publish production
+</code></pre><p>This will publish your API!
+It may take a few minutes to run the first time around.
+If your chosen domain is <code>api.acme.com</code>
+you should be able to <code>curl</code> it.</p>
+<pre><code>curl https://api.acme.com
+</code></pre><p>and get back a API reference document as HTML.</p>
+<h1 id="defining-an-endpoint">Defining An Endpoint</h1>
+<p>Let&#39;s add a greeting endpoint to <code>description.yml</code>.
+Place this under the <code>resources</code> property,
+either before or after the <code>description</code> resource.</p>
+<pre><code class="lang-yaml">  greeting:
+
+    path: &quot;/greeting/{name}&quot;
+    description: Returns a greeting for {name}.
+
+  methods:
+
+    get:
+      method: GET
+      signature:
+        status: 200
+</code></pre>
+<p>We&#39;ve defined a <code>greeting</code> resource
+and a method within that resource named <code>get</code>.</p>
+<h1 id="defining-a-handler">Defining A Handler</h1>
+<p>Add a JavaScript file under <code>lib/handlers</code>
+named <code>greeting-get.js</code>.
+(Handlers are always referenced as
+<em><resource>-<method></em>.)
+Export our greeting function in that file.</p>
+<pre><code class="lang-javascript">module.exports = (data, context, callback) =&gt; `Hello ${data.name}!`
+</code></pre>
+<p>Update <code>lib/handlers/index.js</code> to reference our new handler.</p>
+<pre><code class="lang-javascript">endpoints = {
+  &quot;description-get&quot;: require(&quot;./description-get&quot;)
+  &quot;greeting-get&quot;: require(&quot;./greeting-get&quot;)
+}
+</code></pre>
+<p>Let&#39;s publish our update.</p>
+<pre><code>sky publish production
+</code></pre><p>And test it out.</p>
+<pre><code>curl https://api.acme.org/greeting/World
+Hello World!
+</code></pre><h1 id="summary">Summary</h1>
+<p>So we&#39;ve installed Panda Sky, initialized our application,
+defined a resource, method, and handler,
+and published our API.</p>
