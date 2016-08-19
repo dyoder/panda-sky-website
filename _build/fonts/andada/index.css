@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Andada';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Andada'), url(./400.woff) format('woff')
+}
+@font-face {
+  font-family: 'Andada';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Andada Italic'), url(./400i.woff) format('woff')
+}

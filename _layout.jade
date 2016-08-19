@@ -1,10 +1,38 @@
 html
 
   head
+
+    // Meta
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    link(rel="stylesheet",
+      href="/fonts/charter/index.css", type="text/css")
+    link(rel="stylesheet",
+      href="/fonts/titillium/index.css", type="text/css")
+    link(rel="stylesheet",
+      href="/fonts/fira-mono/index.css", type="text/css")
+
+    // Icon Fonts
+    link(rel='stylesheet',
+      href='/fonts/ionicons/index.css', type="text/css")
+
     link(rel="stylesheet" href="/css/site.css")
+
+
+    // Syntax Highlighting
+    script(src="/prism/prism.js")
+    link(rel="stylesheet", href="/prism/prism.css")
+
+    // JavaScript
+    script(src="/js/modernizr.min.js", type='application/javascript')
+    script(src='/js/jquery-2.1.1.min.js', type='application/javascript')
+    script(src="/js/site.js", type='application/javascript')
 
   body
     .logo
       img(src="/logo.png")
 
-    block content
+    main
+      article
+        block content

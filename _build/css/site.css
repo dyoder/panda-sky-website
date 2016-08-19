@@ -371,32 +371,58 @@ html {
   }
 }
 body {
+  font-family: 'Titillium', sans-serif;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   padding: 5rem 10rem;
-  max-width: 150rem;
+  width: 100%;
+  border-top: 1rem solid #000;
 }
-body > p:first-of-type {
+body main article > p:first-of-type {
   line-height: 7rem;
-  font-size: 2.8rem;
+  font-size: 4.4303rem;
+  border-bottom: 0.25rem solid #c0c0c0;
+  padding-bottom: 4rem;
 }
-body h1,
-body h2,
-body h3,
-body h4,
-body h5,
-body p,
-body li {
-  width: 80rem;
+body article,
+body section {
+  max-width: 108rem;
+  min-width: 40rem;
 }
-body p,
-body li {
+body article h1,
+body section h1,
+body article h2,
+body section h2,
+body article h3,
+body section h3,
+body article h4,
+body section h4,
+body article h5,
+body section h5,
+body article p,
+body section p,
+body article li,
+body section li,
+body article pre,
+body section pre {
+  margin-bottom: 4rem !important;
+}
+body article p,
+body section p,
+body article li,
+body section li {
   line-height: 5rem;
-  font-size: 2rem;
+  font-size: 3.1645rem;
+  font-family: Charter, Georgia, serif;
+  color: rgba(0,0,0,0.8);
+  letter-spacing: -0.003em;
 }
 .logo img {
   width: 50rem;
+}
+code {
+  font-family: 'Fira Mono', monospace;
 }
