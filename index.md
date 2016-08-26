@@ -1,48 +1,28 @@
 - [][GitHub]
 - [Quick Start][]
+- [How It Works][]
 - [Tutorial][]
 - [API Definitions][]
 - [Examples][]
 
 [GitHub]:#
-[Quick Start]:#
+[Quick Start]:/quick-start
+[How It Works]:#
 [Tutorial]:#
-[API Definitions]:#
+[API Definitions]:/api-definitions
 [Examples]:#
 
+
 **Panda&nbsp;Sky** allows you to publish APIs
-just like you can publish static Web sites
-to AWS&nbsp;S3 and CloudFront.
-Your API will run with the same
-reliability, security, and elasticity
-as Amazon&nbsp;Web&nbsp;Services.
+to the Amazon&nbsp;Web&nbsp;Services cloud
+just like you can publish static Web sites.
+Your API runs with the same
+reliability, security, elasticity, and performance
+as AWS.
 
-### Define Your API
-
-```yaml
-resources:
-
-  greeting:
-
-    path: "/greeting/{name}"
-    description: Returns a greeting for {name}.
-
-  methods:
-
-    get:
-      method: GET
-      signature:
-        status: 200
-```
-
-### Define A Handler
-
-```javascript
-module.exports = (data, context, callback) => callback `Hello ${data.name}!`
-```
-
-### And Publish!
-
-```shell
-$ sky publish production
-```
+<script
+  type="text/javascript"
+  src="https://asciinema.org/a/6shisatk09a9sw5pq9ikm2cdu.js"
+  id="asciicast-6shisatk09a9sw5pq9ikm2cdu"
+  async
+  data-autoplay="true"></script>

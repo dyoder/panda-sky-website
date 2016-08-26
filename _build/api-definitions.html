@@ -1,4 +1,5 @@
-<html><head><!-- Meta--><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="stylesheet" href="/fonts/charter/index.css" type="text/css"/><link rel="stylesheet" href="/fonts/titillium/index.css" type="text/css"/><link rel="stylesheet" href="/fonts/fira-mono/index.css" type="text/css"/><!-- Icon Fonts--><link rel="stylesheet" href="/fonts/ionicons/index.css" type="text/css"/><link rel="stylesheet" href="/css/site.css"/><!-- Syntax Highlighting--><script src="/prism/prism.js"></script><link rel="stylesheet" href="/prism/prism.css"/><!-- JavaScript--><script src="/js/modernizr.min.js" type="application/javascript"></script><script src="/js/jquery-2.1.1.min.js" type="application/javascript"></script><script src="/js/site.js" type="application/javascript"></script></head><body><div class="logo"><img src="/logo.png"/></div><main><article><p>The Panda Sky API definition is a YAML description
+<html><head><!-- Meta--><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="stylesheet" href="/fonts/charter/index.css" type="text/css"/><link rel="stylesheet" href="/fonts/titillium/index.css" type="text/css"/><link rel="stylesheet" href="/fonts/fira-mono/index.css" type="text/css"/><!-- Icon Fonts--><link rel="stylesheet" href="/fonts/ionicons/index.css" type="text/css"/><link rel="stylesheet" href="/css/site.css"/><!-- Syntax Highlighting--><script src="/prism/prism.js"></script><link rel="stylesheet" href="/prism/prism.css"/><!-- JavaScript--><script src="/js/modernizr.min.js" type="application/javascript"></script><script src="/js/jquery-2.1.1.min.js" type="application/javascript"></script><script src="/js/site.js" type="application/javascript"></script></head><body><div class="logo"><a href="/"><img src="/logo.png"/></a></div><main><article id="api-definitions"><h1 id="api-definitions">API Definitions</h1>
+<p>The Panda Sky API definition is a YAML description
 of your API.
 At the top level, a Panda Sky API definition
 has four properties:</p>
@@ -8,7 +9,7 @@ has four properties:</p>
 <li>a resources dictionary</li>
 <li>a schema dictionary</li>
 </ul>
-<h1 id="the-resources-dictionary">The Resources Dictionary</h1>
+<h2 id="the-resources-dictionary">The Resources Dictionary</h2>
 <p>Each resource for an API
 is described as entry in the resources dictionary.
 The key is the resource name
@@ -24,7 +25,7 @@ and the value describes the resource itself.</p>
 such as <code>/greeting/{name}</code>.
 These will be available as attributes in the <code>data</code>
 object passed in to your handler.</p>
-<h1 id="the-methods-dictionary">The Methods Dictionary</h1>
+<h2 id="the-methods-dictionary">The Methods Dictionary</h2>
 <p>Each method for a given resource
 is described as entry in the methods dictionary.
 The key is the method name
@@ -35,7 +36,7 @@ and the value describes the resource itself.</p>
 <li>the HTTP method used to invoke it</li>
 <li>a signature</li>
 </ul>
-<h1 id="method-signatures">Method Signatures</h1>
+<h2 id="method-signatures">Method Signatures</h2>
 <p>The signature includes three properties,
 one for the request and one for the response
 and one for the expected status.
@@ -44,7 +45,7 @@ The <code>status</code> property defaults to <code>200</code>.</p>
 <p>When provided, the <code>request</code> and <code>response</code>
 properties should reference a type defined
 by the API&#39;s <code>schema</code> property.</p>
-<h1 id="the-schema-dictionary">The Schema Dictionary</h1>
+<h2 id="the-schema-dictionary">The Schema Dictionary</h2>
 <p>The schema dictionary describes the types
 referenced by resource method descriptions.
 The key is the name of the type.
@@ -64,7 +65,7 @@ to determine what <code>accept</code> or <code>content-type</code> headers to us
 This can either be <code>application/json</code> or a custom media type,
 such as:</p>
 <pre><code>application/vnd.acme.org.greeting+json; version=1.0; charset=UTF-8
-</code></pre><h1 id="comparison-to-other-api-description-formats">Comparison To Other API Description Formats</h1>
+</code></pre><h2 id="comparison-to-other-api-description-formats">Comparison To Other API Description Formats</h2>
 <p>Other API definition formats, such as Swagger or RAML,
 get the semantics of HTTP resources wrong.
 Query parameters help identify a <em>resource</em>

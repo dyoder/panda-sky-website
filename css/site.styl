@@ -42,11 +42,49 @@ body
     img
       width 50rem
 
-  main
-    article
+  // general body text
+  article, section
+
+    max-width 108rem
+    min-width 40rem
+
+    h1, h2, h3, h4, h5, p, li, pre
+      margin-bottom 4rem !important
+
+    // tighten margin when followed by body test since
+    // the line-height creates an implicit margin
+    h1, h2, h3, h4, h5
+      & + p, ul
+        margin-top -1rem
+
+    p, li
+      rhythm 5rem 36.71%
+      font-family Charter, Georgia, serif
+      color rgba(0,0,0,.8)
+      letter-spacing -.003em
+      text-rendering auto
+      -webkit-font-smoothing antialiased
+      -moz-osx-font-smoothing grayscale;
+
+    li
+      list-style-type square
+
+    // standalone code (Prism takes care of the rest)
+    p, li
+      code
+        rhythm 3rem 10%
+        font-family 'Fira Mono', monospace !important
+
+    // change the way Prism displays language label
+    .prism-show-language
+      text-align right
+
+    // page specific variations
+    &#index
 
       // first UL is the main menu
       & > ul:first-of-type
+        padding-left 2rem
         flow row left
         border-bottom 1px solid silver
         padding-bottom 4rem
@@ -55,6 +93,8 @@ body
 
         // menu items
         & > li
+
+          list-style-type none
 
           // first menu item is the GitHub link
           &:first-child
@@ -80,30 +120,3 @@ body
         rhythm 7rem 36.71%
         border-bottom 0.25rem solid silver
         padding-bottom 4rem
-
-  // general body text
-  article, section
-    max-width 108rem
-    min-width 40rem
-
-    h1, h2, h3, h4, h5, p, li, pre
-      margin-bottom 4rem
-
-    p, li
-      rhythm 5rem 36.71%
-      font-family Charter, Georgia, serif
-      color rgba(0,0,0,.8)
-      letter-spacing -.003em
-      text-rendering auto
-      -webkit-font-smoothing antialiased
-      -moz-osx-font-smoothing grayscale;
-
-    // make sure there is add'l margin
-    // after major headings
-    *
-      & + h1, & + h2, & + h3
-        margin-top 6rem
-
-    // standalone code (Prism takes care of the rest)
-    code
-      font-family 'Fira Mono', monospace

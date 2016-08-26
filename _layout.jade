@@ -31,8 +31,9 @@ html
 
   body
     .logo
-      img(src="/logo.png")
+      a(href="/")
+        img(src="/logo.png")
 
     main
-      article
+      article(id='#{name}')
         block content

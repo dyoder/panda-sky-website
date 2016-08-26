@@ -1,3 +1,5 @@
+# API Definitions
+
 The Panda Sky API definition is a YAML description
 of your API.
 At the top level, a Panda Sky API definition
@@ -8,7 +10,7 @@ has four properties:
 - a resources dictionary
 - a schema dictionary
 
-# The Resources Dictionary
+## The Resources Dictionary
 
 Each resource for an API
 is described as entry in the resources dictionary.
@@ -27,7 +29,7 @@ such as `/greeting/{name}`.
 These will be available as attributes in the `data`
 object passed in to your handler.
 
-# The Methods Dictionary
+## The Methods Dictionary
 
 Each method for a given resource
 is described as entry in the methods dictionary.
@@ -40,7 +42,7 @@ Each method has two properties:
 - the HTTP method used to invoke it
 - a signature
 
-# Method Signatures
+## Method Signatures
 
 The signature includes three properties,
 one for the request and one for the response
@@ -52,7 +54,7 @@ When provided, the `request` and `response`
 properties should reference a type defined
 by the API's `schema` property.
 
-# The Schema Dictionary
+## The Schema Dictionary
 
 The schema dictionary describes the types
 referenced by resource method descriptions.
@@ -75,9 +77,11 @@ to determine what `accept` or `content-type` headers to use.
 This can either be `application/json` or a custom media type,
 such as:
 
-    application/vnd.acme.org.greeting+json; version=1.0; charset=UTF-8
+```
+application/vnd.acme.org.greeting+json; version=1.0; charset=UTF-8
+```
 
-# Comparison To Other API Description Formats
+## Comparison To Other API Description Formats
 
 Other API definition formats, such as Swagger or RAML,
 get the semantics of HTTP resources wrong.
