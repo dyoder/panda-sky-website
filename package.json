@@ -1,0 +1,31 @@
+{
+  "name": "panda-sky-www",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pandastrike/panda-sky-www.git"
+  },
+  "contributors": [
+    {
+      "name": "Dan Yoder",
+      "email": "dan@pandastrike.com"
+    },
+    {
+      "name": "David Harper",
+      "email": "david@pandastrike.com"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pandastrike/panda-sky-www/issues"
+  },
+  "homepage": "https://github.com/pandastrike/panda-sky-www#readme",
+  "dependencies": {
+    "verse": "^1.0.0-alpha-05"
+  }
+}
