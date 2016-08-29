@@ -2,15 +2,13 @@
 - [Quick Start][]
 - [How It Works][]
 - [Tutorial][]
-- [API Definitions][]
-- [Examples][]
+- [Reference][]
 
-[GitHub]:#
-[Quick Start]:/quick-start
+[GitHub]:https://github.com/pandastrike/panda-sky
+[Quick Start]:/demos/quick-start
 [How It Works]:#
-[Tutorial]:#
-[API Definitions]:/api-definitions
-[Examples]:#
+[Tutorial]:/demos
+[Reference]:/reference/
 
 
 **Panda&nbsp;Sky** allows you to publish APIs
