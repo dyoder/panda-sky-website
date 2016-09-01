@@ -1,7 +1,11 @@
-# API Definitions
+# API Definition Reference
 
-The Panda Sky API definition is a YAML description
-of your API.
+The Panda Sky API Definition is a YAML description of your API.
+The [schema][] is defined and validated usign JSON Schema.
+
+[schema]:https://github.com/pandastrike/panda-sky/blob/master/schema/definition.yaml
+
+
 At the top level, a Panda Sky API definition
 has four properties:
 

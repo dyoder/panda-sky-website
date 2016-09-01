@@ -4,7 +4,6 @@ pct(n)
 use("_plugins/verse.js")
 @import "verse"
 
-
 // The font size is set based on Medium's use
 // of 21px Charter font for the body and
 // a line-height ratio of 1.58.
@@ -75,6 +74,14 @@ body
         rhythm 3rem 10%
         font-family 'Fira Mono', monospace !important
 
+      & > a
+        color darken(#0e83cd, 25%)
+        text-decoration none
+
+        &:hover
+          color lighten(#0e83cd, 25%)
+
+
     // change the way Prism displays language label
     .prism-show-language
       text-align right
@@ -84,44 +91,39 @@ body
       color: #777
       border-left: 1rem solid #ddd
 
-    // page specific variations
-    &#index
+  main > article
 
-      // first UL is the main menu
-      & > ul:first-of-type
-        padding-left 2rem
-        flow row left
-        border-bottom 1px solid silver
-        padding-bottom 4rem
-        margin-top 4rem
-        margin-bottom 4rem
+    // first UL is the main menu
+    & > ul:first-of-type
+      padding-left 2rem
+      flow row left
+      border-bottom 1px solid silver
+      padding-bottom 4rem
+      margin-top 4rem
+      margin-bottom 4rem
 
-        // menu items
-        & > li
+      // menu items
+      & > li
 
-          list-style-type none
+        list-style-type none
+        margin 0 4rem 0 0
+        font-family Titillium, Verdana, sans-serif
+        font-weight bold
+        rhythm 3rem, 10%
 
-          // first menu item is the GitHub link
-          &:first-child
-            & > a:before
-              display inline-block
-              font-family Ionicons
-              content: "\f233"
+        // first menu item is the GitHub link
+        &:first-child
+          & > a:before
+            display inline-block
+            font-family Ionicons
+            content: "\f233"
 
-          margin 0 4rem 0 0
-          font-family Titillium, Verdana, sans-serif
-          font-weight bold
-          rhythm 3rem, 10%
+    // page specific styling
 
-          & > a
-            color darken(#0e83cd, 25%)
-            text-decoration none
+    // home page
 
-            &:hover
-              color lighten(#0e83cd, 25%)
-
-      // “hero” text
-      & > p:first-of-type
-        rhythm 7rem 36.71%
-        border-bottom 0.25rem solid silver
-        padding-bottom 4rem
+    // “hero” text
+    &#index > p:first-of-type
+      rhythm 7rem 36.71%
+      border-bottom 0.25rem solid silver
+      padding-bottom 4rem
