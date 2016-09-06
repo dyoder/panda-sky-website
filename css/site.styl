@@ -4,6 +4,12 @@ pct(n)
 use("_plugins/verse.js")
 @import "verse"
 
+ul-menu()
+  flow row left wrap
+  & > li
+    list-style-type none
+    {block}
+
 // The font size is set based on Medium's use
 // of 21px Charter font for the body and
 // a line-height ratio of 1.58.
@@ -95,21 +101,19 @@ body
 
     // first UL is the main menu
     & > ul:first-of-type
-      padding-left 2rem
-      flow row left
+
       border-bottom 1px solid silver
       padding-bottom 4rem
       margin-top 4rem
       margin-bottom 4rem
+      padding-left 2rem
 
-      // menu items
-      & > li
+      +ul-menu()
 
-        list-style-type none
-        margin 0 4rem 0 0
         font-family Titillium, Verdana, sans-serif
         font-weight bold
         rhythm 3rem, 10%
+        margin 0 4rem 0 0
 
         // first menu item is the GitHub link
         &:first-child
@@ -127,3 +131,7 @@ body
       rhythm 7rem 36.71%
       border-bottom 0.25rem solid silver
       padding-bottom 4rem
+
+    // TOC
+    #table-of-contents + ul
+      ul-menu()

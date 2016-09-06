@@ -5,33 +5,45 @@ The [schema][] is defined and validated usign JSON Schema.
 
 [schema]:https://github.com/pandastrike/panda-sky/blob/master/schema/definition.yaml
 
+## Table Of Contents
+
+- [Top Level Properties](#top-level-properties)
+- [The Resources Dictionary](#the-resources-dictionary)
+- [The Methods Dictionary](#the-methods-dictionary)
+- [Method Signatures](#method-signatures)
+- [The Schema Dictionary](#the-schema-dictionary)
+
+## Top Level Properties
 
 At the top level, a Panda Sky API definition
 has four properties:
 
-- a name
-- a description
-- a resources dictionary
-- a schema dictionary
+- `name`: the name of your API
+- `description`: a brief description of what it does
+- `resources`: a dictionary of your API's resources
+- `schema`: a schema for media types used in our API
 
 ## The Resources Dictionary
 
 Each resource for an API
 is described as entry in the resources dictionary.
 The key is the resource name
-(which is used to determine the handler name)
 and the value describes the resource itself.
 
 Each resource has three properties:
 
-- a description
-- a path
-- a methods dictionary
+- `description`: a brief description of the resource
+
+- `path`: the URL path that will map to this resource.
 
 The path may include parameters using curly braces,
 such as `/greeting/{name}`.
+
 These will be available as attributes in the `data`
 object passed in to your handler.
+
+- `methods`: a dictionary of methods supported by this resource.
+
 
 ## The Methods Dictionary
 
