@@ -1,16 +1,3 @@
-- [][GitHub]
-- [Quick Start][]
-- [How It Works][]
-- [Tutorial][]
-- [Reference][]
-
-[GitHub]:https://github.com/pandastrike/panda-sky
-[Quick Start]:/demos/quick-start
-[How It Works]:#
-[Tutorial]:/demos
-[Reference]:/reference/
-
-
 **Panda&nbsp;Sky** allows you to publish APIs
 to the Amazon&nbsp;Web&nbsp;Services cloud
 just like you can publish static Web sites.
