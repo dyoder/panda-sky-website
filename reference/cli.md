@@ -1,13 +1,13 @@
-# Commandline Interface Reference
+# Usage: `sky`
 
-This document contains use information for Panda Sky's commandline interface.
+This document contains use information for Panda Sky's command line interface.
 After installation, the executable `sky` is made
 available to you.  `sky` has the following subcommands:
 
-- [build](#build)
-- [delete](#delete)
-- [init](#init)
-- [publish](#publish)
+- [`init`](#init)—Initializes your API
+- [`build`](#build)—Packages up your API for publishing.
+- [`publish`](#publish)—Publishes your API
+- [`delete`](#delete)—Removes a published API
 
 ## build
 #### Usage
@@ -23,7 +23,7 @@ and places them into a single ZIP archive at `deploy/package.zip`.
 
 #### Notes:
 > Panda Sky supports CoffeeScript and will compile any within `src/` to JavaScript
-before packaging.  
+before packaging.
 
 > Because only node libraries within `node_modules` can be
 required in your deployed code, Panda Sky runs `npm install` to update
@@ -63,7 +63,7 @@ but may be defined by using `require()` to pull code from other files.
 - `src/s3.js`: This is an usability wrapper for AWS's S3 service, exposing GET
 and PUT as functions within the handler. Formal integration is roadmapped.
 
-These files are stubs of the basic framework needed to deploy your project.  
+These files are stubs of the basic framework needed to deploy your project.
 
 #### Notes
 > This command relies on you to setup your own `package.json` with
