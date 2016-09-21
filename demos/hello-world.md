@@ -1,36 +1,32 @@
 # Tutorials: Hello World
 
 Let's get you setup with your first serverless API deployment, courtesy of Panda
-Sky.  
+Sky.
 
 ## Prerequisites
+
 Panda Sky has a couple requirements in place before it can work its magic.
 
 #### Node
-Your system must have Node v4.5.0 installed.
-1. If you have `nvm` installed, run:
+
+Your system must have Node v4.5.0 or greater installed.
+
+- If you have `nvm` installed, run:
 ```shell
 nvm install 4.5
 ```
-2. If you **don't** have `nvm`, please see [Node's site][] for installation
+
+- If you **don't** have `nvm`, please see the [Node docs][] for installation
 instructions.
 
 #### AWS Credentials
+
 Panda Sky needs your AWS credentials to allocate resources on your behalf.  If
 you've installed the AWS CLI tool, they should be on your machine already.
-Panda Sky looks for them in their default location within the home
-directory, `~/.aws/`.
 
-If you do not have an AWS account, [this AWS tutorial][] walks you through the
-process of setting one up.  You can either manually place your credentials into
-the `~/.aws/` directory or follow the instructions to install the CLI to let it
-do that for you automatically.
+- [Learn more about setting up your AWS credentials][aws-client].
 
-> **YOUR AWS CREDENTIALS SHOULD NEVER BE PLACED WITHIN YOUR PROJECT'S REPO NOR
-DOES PANDA SKY ASK FOR THEM IN THE MAIN CONFIG FILE.**
-
-[Node's site]: https://nodejs.org/en/
-[this AWS tutorial]: http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html
+[aws-client]:/reference/aws-client
 
 
 ## Installation
@@ -222,7 +218,7 @@ sky build
 The archive `deploy/package.zip` is created.  It contains all your Node code and
 any Node modules from your `package.json` manifest (`node_modules/`).  If you
 choose to author your handlers in CoffeeScript, Panda Sky converts it to
-JavaScript before placing it in this archive for you.  
+JavaScript before placing it in this archive for you.
 
 The archive contains everything needed for a viable Lambda.  Panda Sky uploads
 the archive to an S3 bucket and points the Lambdas it sets up to the archive.
