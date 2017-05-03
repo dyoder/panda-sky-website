@@ -35,18 +35,20 @@ html
         img(src="/logo.png")
 
     main
-      article(id="#{path.replace('/','-')}")
-        :markdown
-          - [][GitHub]
-          - [Quick Start][]
-          - [How It Works][]
-          - [Tutorial][]
-          - [Reference][]
 
-          [GitHub]:https://github.com/pandastrike/panda-sky
-          [Quick Start]:/demos/quick-start
-          [How It Works]:#
-          [Tutorial]:/demos
-          [Reference]:/reference/
+      article(id="#{path.replace('/','-')}")
+        //-
+          :markdown
+            - [][GitHub]
+            - [Quick Start][]
+            - [How It Works][]
+            - [Tutorial][]
+            - [Reference][]
+
+            [GitHub]:https://github.com/pandastrike/panda-sky
+            [Quick Start]:/demos/quick-start
+            [How It Works]:#
+            [Tutorial]:/demos
+            [Reference]:/reference/
 
         block content
