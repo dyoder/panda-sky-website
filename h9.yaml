@@ -1,4 +1,4 @@
-source: "."
+source: "www"
 target: "_build"
 server:
   port: 8088
