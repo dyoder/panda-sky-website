@@ -15,7 +15,6 @@ aws:
   environments:
 
     production:
-      apex: secondary
       hostnames:
         - sky
       cache:
